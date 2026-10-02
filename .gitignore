@@ -1,0 +1,4 @@
+tests/*.png
+node_modules/
+*.tar.gz
+*.tar
