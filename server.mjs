@@ -17,4 +17,4 @@ const server=http.createServer(async(req,res)=>{
   }catch{res.writeHead(404,{'Content-Type':'text/plain'});res.end('Not found');}
 });
 server.on('error',error=>{console.error(error.code==='EADDRINUSE'?`Port ${port} is in use. Set PORT to a different port and try again.`:error.message);process.exitCode=1;});
-server.listen(port,'127.0.0.1',()=>console.log(`Void Command is ready: http://localhost:${port}\nPress Ctrl+C to stop.`));
+server.listen(port,'0.0.0.0',()=>console.log(`Void Command is ready on port ${port}\nPress Ctrl+C to stop.`));
